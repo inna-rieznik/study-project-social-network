@@ -1,0 +1,14 @@
+.header {
+    grid-area: header;
+    background: linear-gradient(239deg, #eeaeca, #94bbe9);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.20),
+                0 15px 12px rgba(0,0,0,0.15);
+    padding: 10px;
+  }
+
+  
+.header img {
+    width: 60px;
+    height: auto;
+  }
