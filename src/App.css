@@ -11,3 +11,12 @@
   grid-gap: 20px;
 }
 
+
+.app-wrapper-content {
+  background-color:#ffe1ee;
+  grid-area: app-content;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.20),
+              0 15px 12px rgba(0,0,0,0.15);
+  padding: 10px;
+}

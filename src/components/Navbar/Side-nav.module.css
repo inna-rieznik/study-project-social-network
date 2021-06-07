@@ -17,4 +17,9 @@
 
 .active {
   color: blue;
+  text-decoration: underline;
+}
+
+.item:hover{
+  color: blue;
 }

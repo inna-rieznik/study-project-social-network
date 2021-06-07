@@ -1,19 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
-import Side_nav from './components/Side-nav';
-import App_content from './components/Profile';
+import Header from './components/Header/Header.jsx';
+import Side_nav from './components/Navbar/Side-nav.jsx';
+import App_content from './components/Profile/Profile.jsx';
+import Dialogs from './components/Dialogs/Dialogs';
+import News from './components/News/News';
+import Music from './components/Music/Music';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 
 
 
 const App = () => { //created variable App
   return (  //стрелочная функция возвращает разметку
-    <div className="app-wrapper">
-      <Header />
-      <Side_nav />
-      <App_content />
-     </div>
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <Header />
+        <Side_nav />
+        <div className="app-wrapper-content">
+          <Route path='/dialogs' component={Dialogs} />
+          <Route path='/profile' component={App_content} />
+          <Route path='/news' component={News} />
+          <Route path='/music' component={Music}/>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
