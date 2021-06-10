@@ -7,15 +7,9 @@ import Post from './Posts/Post';
 
 const My_posts = (props) => {
 
-  //object with posts
-  let posts = [
-    {id:1, message:"Hey, How you doing?", likes:10},
-    {id:2, message:"It's my first post!", likes:204},
-    {id:3, message:"Nice to be there?", likes:10},
-  ]
+  //array of post objects which we passed to postData array
 
-  //array of post objects 
-  let postsData = posts.map( p => <Post message={p.message} likes={p.likes} /> )
+  let postsData = props.posts.map( p => <Post message={p.message} likes={p.likes} /> )
 
   return (
     <div>

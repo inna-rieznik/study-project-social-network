@@ -11,17 +11,25 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 
 
-const App = () => { //created variable App
+const App = (props) => { //created variable App
+
+  
+  
   return (  //стрелочная функция возвращает разметку
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Side_nav />
         <div className="app-wrapper-content">
-          <Route path='/dialogs' component={Dialogs} />
+          {/* <Route path='/dialogs' component={Dialogs} />
           <Route path='/profile' component={App_content} />
           <Route path='/news' component={News} />
-          <Route path='/music' component={Music}/>
+          <Route path='/music' component={Music}/> */}
+
+          <Route path='/dialogs'render={() => <Dialogs dialogs={props.dialogs} messages={props.messages}/>} />
+          <Route path='/profile' render={() => <App_content posts={props.posts}/>} />
+          <Route path='/news'render={() => <News/>} />
+          <Route path='/music' render={() => <Music/>}/>
         </div>
       </div>
     </BrowserRouter>

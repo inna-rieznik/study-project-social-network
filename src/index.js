@@ -4,10 +4,31 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+let posts = [
+  { id: 1, message: "Hey, How you doing?", likes: 10 },
+  { id: 2, message: "It's my first post!", likes: 204 },
+  { id: 3, message: "Nice to be there?", likes: 10 },
+]
+
+let dialogs = [
+  { id: 1, name: 'Dima' },
+  { id: 2, name: 'Misha' },
+  { id: 3, name: 'Tania' }
+]
+
+let messages = [
+  { id: 1, message: "Hi" },
+  { id: 2, message: "How you doing" },
+  { id: 3, message: "yo" },
+  { id: 4, message: "yoyoyo" }
+]
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    
+
+    {/* like value of atributes we give objectName */}
+    <App posts={posts} dialogs={dialogs} messages={messages} />
+
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -16,3 +37,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
