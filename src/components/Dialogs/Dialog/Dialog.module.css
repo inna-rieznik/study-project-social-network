@@ -1,13 +1,13 @@
-.dialogs{
+.dialog{
   display: grid;
-  grid-template-columns: 3fr 4fr;
+  grid-template-columns: 80px 2fr;
+}
+.dialogImg{
+  width: 70px;
+  height: auto;
+  border-radius: 50%;
 }
 
-.dialogsItem{
-  font-size: 20px;
+a{
+  margin: 10px;
 }
-
-.messages{
-  font-size: 15px;
-}
-
