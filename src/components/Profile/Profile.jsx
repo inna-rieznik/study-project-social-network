@@ -13,7 +13,10 @@ const App_content = (props) => {
         <div >
           <img className={classes.image} src="http://cdn.cnn.com/cnnnext/dam/assets/181010131059-australia-best-beaches-cossies-beach-cocos3.jpg"></img>
         </div>
-        <My_posts posts={props.posts} addPostSt={props.addPostSt} />
+        <My_posts posts={props.posts} 
+                  addPostSt={props.addPostSt} 
+                  newPostText={props.newPostText}
+                  updateNewPostText={props.updateNewPostText}/>
       </div>
     );
 }

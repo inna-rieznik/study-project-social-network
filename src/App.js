@@ -27,10 +27,14 @@ const App = (props) => { //created variable App
           <Route path='/dialogs' 
                  render={() => <Dialogs dialogs={props.state.dialogsPage.dialogs} 
                                         messages={props.state.dialogsPage.messages} 
-                                        addMessageSt={props.addMessageSt}/>} />
+                                        updateNewMessageText={props.updateNewMessageText}
+                                        addMessageSt={props.addMessageSt}
+                                        newMessageText={props.state.dialogsPage.newMessageText}/>} />
 
           <Route path='/profile' 
                  render={() => <App_content posts={props.state.profilePage.posts }
+                                            newPostText={props.state.profilePage.newPostText}
+                                            updateNewPostText={props.updateNewPostText}
                                             addPostSt={props.addPostSt}/>} />
 
           <Route path='/news'render={() => <News/>} />
